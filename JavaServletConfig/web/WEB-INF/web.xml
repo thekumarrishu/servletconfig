@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <servlet>
+        <servlet-name>addleague</servlet-name>
+        <servlet-class>controller.addleague</servlet-class>
+        
+    </servlet>
+    <servlet>
+        <servlet-name>addleagueform</servlet-name>
+        <servlet-class>view.addleagueform</servlet-class>
+        <init-param>
+            <param-name>seasons-list</param-name>
+            <param-value>Spring,Summer,Autumn,Winter</param-value>
+        </init-param>
+            
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>addleague</servlet-name>
+        <url-pattern>/addleague</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>addleagueform</servlet-name>
+        <url-pattern>/addleagueform</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>
